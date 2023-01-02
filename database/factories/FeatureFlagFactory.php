@@ -12,7 +12,11 @@ class FeatureFlagFactory extends Factory
     public function definition()
     {
         return [
-
+            'name' => fake()->word(),
+            'description' => null,
+            'enabled' => fake()->randomElement([true, false]),
+            'flaggable_type' => null,
+            'flaggable_id' => null
         ];
     }
 }

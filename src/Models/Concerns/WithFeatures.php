@@ -13,7 +13,7 @@ trait WithFeatures
 {
     public function features(): MorphMany
     {
-        return $this->morphMany(FeatureFlag::class);
+        return $this->morphMany(FeatureFlag::class, 'flaggable');
     }
 
     public function enableFeature(string $name): void
